@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.column {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  text-align: center;
+  background-color: #474e5d;
+  color: white;
+  position: relative;
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.title {
+  color: grey;
+}
+
+.new{
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+.nav__content {
+  max-width: var(--max-width);
+  margin: auto;
+  padding: 1.5rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: static;
+}
+nav {
+  width: 100%;
+  position: static;
+  top: 0;
+  left: 0;
+  background-color: var(--text-light);
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav ul li {
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  padding: 8px 16px;
+  display: block;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+nav .logo a {
+  font-size: 2rem;
+  font-weight: 600;
+  justify-content: center;
+  color: goldenrod;
+  transition: 0.3s;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial;
+  letter-spacing: 2px;
+}
+
+nav .logo a:hover {
+  color: black;
+}
+
+.new:hover {
+  background-color: #555;
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+</style>
+</head>
+<body>
+  <nav>
+    <div class="nav__content">
+      <div class="logo"><a href="#">Kowshik</a></div>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="skills.html">Skills</a></li>
+      </ul>
+    </div>
+  </nav>
+<div class="about-section">
+  <h1>About Me</h1>
+  <p></p>
+  <p>I am looking for a job of a web developer, since that’s what I’ve been doing already for four years in my free time. Designing websites for friends, developing simple e-shops with the help of some open source content-management systems, and so on. </p>
+  <p> Besides that I am a normal guy who enjoys hiking and spending time with friends, while not working or studying, which takes most of my time of course. If  I am ambitious and hard-working and believe you’ll give me a chance to prove my words.</p>
+</div>
+
+<h2 style="text-align:center">Our Team</h2>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <div class="container">
+        <img src="https://tse1.mm.bing.net/th?id=OIP.N3cFVgAShuhUnvU-yBB12AHaEK&pid=Api&rs=1&c=1&qlt=95&w=171&h=96" alt="git" height="280px">
+        <h2>Email</h2>
+        <p class="title"></p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>jane@example.com</p>
+        <div class="new">
+          <button><a href="mailto:727822tuec112@skct.edu.in">Mail me</a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="https://tse4.mm.bing.net/th?id=OIP.NGIDdVP6vw9ue_D-mrEVFQHaHa&pid=Api&P=0&h=180" alt="git" height="280px">
+      <div class="container">
+        <h2>Git Hub</h2>
+        <p class="title">Web Developer</p>
+        <p>The following link contains my github links where I had posted my projects</p>
+        <div class="new">
+          <button><a href="https://github.com/kowshik904/">GitHub</a></button>
+        </div> 
+      </div>
+    </div>
+  </div>
+  
+  <div class="column">
+    <div class="card">
+      <img src="http://1000marcas.net/wp-content/uploads/2020/01/Logo-Linkedin.png" alt="Linked In" style="width:100%">
+      <div class="container">
+        <h2>Linked In</h2>
+        <p class="title">Technophile</p>
+        <p>The following link provides my linked in profile</p>
+        <div class="new">
+          <button><a href="https://www.linkedin.com/">LinkedIn</a></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>
