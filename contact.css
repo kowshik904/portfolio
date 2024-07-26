@@ -1,29 +1,47 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
+
+:root {
+  --primary-color: #a855f7;
+  --primary-color-dark: #ad33ea;
+  --secondary-color: #ca8a04;
+  --text-dark: #000000; /* Black color for hover effect */
+  --text-light: #6b7280; /* Light grey for non-hover text */
+  --extra-light: #faf5ff;
+  --max-width: 1200px;
+}
 
 * {
-  margin: 0;
   padding: 0;
+  margin: 0;
   box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
+}
+
+a {
+  text-decoration: none;
 }
 
 body {
-  min-height: 100vh;
-  width: 100%;
-  background: whitesmoke;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
+  font-family: "Poppins", sans-serif;
+  background-color: var(--extra-light);
 }
 
 nav {
   width: 100%;
-  background-color: var(--text-light);
   position: fixed;
   top: 0;
   left: 0;
-  z-index: 1000;
+  background-color: var(--text-light);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;+
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 120px auto 0; /* Adjust this value to push the container further down */
+  background: #fff;
+  border-radius: 6px;
+  padding: 20px 60px 30px 40px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 .nav__content {
@@ -35,33 +53,141 @@ nav {
   justify-content: space-between;
 }
 
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  display: flex;
-}
-
-nav ul li {
-  margin-right: 20px;
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: black;
-  padding: 8px 16px;
-  display: block;
-  transition: background-color 0.3s, color 0.3s;
-}
-
-nav ul li a:hover {
-  background-color: #ddd;
-  color: black;
-}
-
 nav .logo a {
   font-size: 2rem;
   font-weight: 600;
   color: goldenrod;
-  transition: 0.3s;
-  font-family: 'Franklin Gothic
+  transition: color 0.3s;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial;
+  letter-spacing: 2px;
+}
+
+nav .logo a:hover {
+  color: var(--text-dark);
+}
+
+nav .checkbox {
+  display: none;
+}
+
+nav input {
+  display: none;
+}
+
+nav .checkbox i {
+  font-size: 2rem;
+  color: var(--primary-color);
+  cursor: pointer;
+}
+
+ul {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  list-style: none;
+  transition: right 0.3s;
+}
+
+ul li a {
+  padding: 0.5rem 1rem;
+  border: 2px solid goldenrod;
+  font-weight: 600;
+  color: goldenrod; 
+  transition: color 0.3s, background-color 0.3s;
+  border-radius: 10px;
+}
+
+ul li a:hover {
+  border-color: grey;
+  background-color: grey;
+  color: var(--text-dark);
+}
+
+
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.details {
+  margin: 14px;
+  text-align: center;
+}
+
+.details i {
+  font-size: 30px;
+  color: goldenrod; /* Set icon color to gold */
+  transition: color 0.3s; /* Smooth transition effect */
+}
+
+.details i:hover {
+  color: black; /* Change icon color to black on hover */
+}
+
+.details .text-one,
+.details .text-two {
+  font-size: 14px;
+  color: var(--text-light);
+}
+
+.right-side {
+  width: 75%;
+  margin-left: 75px;
+}
+
+.topic-text {
+  font-size: 23px;
+  font-weight: 600;
+  color: goldenrod; /* Set text color to gold */
+  transition: color 0.3s; /* Smooth transition effect */
+}
+
+.topic-text:hover {
+  color: black; /* Change text color to black on hover */
+}
+
+.input-box {
+  width: 100%;
+  height: 50px;
+  margin: 12px 0;
+}
+
+.input-box input,
+.input-box textarea {
+  width: 100%;
+  height: 100%;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: #F0F1F8;
+  border-radius: 6px;
+  padding: 0 15px;
+  resize: none;
+}
+
+.message-box {
+  min-height: 110px;
+}
+
+.button {
+  display: inline-block;
+  margin-top: 12px;
+}
+
+.button input[type="button"] {
+  color: #fff;
+  font-size: 18px;
+  outline: none;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  background-color: goldenrod;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.button input[type="button"]:hover {
+  background-color: grey;
+}

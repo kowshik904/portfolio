@@ -1,15 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap");
 
 :root {
-  --primary-color: #a855f7;
-  --primary-color-dark: #ad33ea;
-  --secondary-color: #ca8a04;
-  --text-dark: #1f2937;
   --text-light: #6b7280;
-  --extra-light: #faf5ff;
-  --max-width: 1200px;
 }
-
 * {
   padding: 0;
   margin: 0;
@@ -17,11 +10,18 @@
 }
 
 a {
-  text-decoration: none;
+  text-decoration:none;
 }
 
-body {
+body, html {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin: 0;
   font-family: "Poppins", sans-serif;
+  background-color: var(--extra-light);
 }
 
 nav {
@@ -30,7 +30,8 @@ nav {
   top: 0;
   left: 0;
   background-color: var(--text-light);
-  
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
 }
 
 .nav__content {
@@ -39,36 +40,21 @@ nav {
   padding: 1.5rem 1rem;
   display: flex;
   align-items: center;
-  justify-content:space-between;
-  position: static;
+  justify-content: space-between;
 }
 
 nav .logo a {
   font-size: 2rem;
   font-weight: 600;
-  justify-content: center;
-  color:goldenrod;
-  transition: 0.3s;
+  color: goldenrod;
+  transition: color 0.3s;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial;
   letter-spacing: 2px;
 }
+
 nav .logo a:hover {
-  color: black;
+  color: var(--text-dark);
 }
-
-nav .checkbox {
-  display: none;
-}
-
-nav input {
-  display: none;
-}
-nav .checkbox i {
-  font-size: 2rem;
-  color: var(--primary-color);
-  cursor: pointer;
-}
-
 ul {
   display: flex;
   align-items: center;
@@ -79,22 +65,17 @@ ul {
 
 ul li a {
   padding: 0.5rem 1rem;
-  border: 2px solid gold;
-  text-decoration: none;
+  border: 2px solid goldenrod;
   font-weight: 600;
   color: goldenrod; 
-  transition: 0.3s;
+  transition: color 0.3s, background-color 0.3s;
   border-radius: 10px;
 }
 
 ul li a:hover {
-  border-top-color: grey;
-  border-bottom-color: grey;
-  border-left-color: grey;
-  border-right-color:grey;
-  border-radius: 3px;
+  border-color: grey;
   background-color: grey;
-  color: black;
+  color: var(--text-dark);
 }
 
 .section {
@@ -102,19 +83,20 @@ ul li a:hover {
 }
 
 .section__container {
-  min-height: 100vh;
-  max-width: var(--max-width);
   margin: auto;
   padding: 1rem;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .content {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 }
 
 .subtitle {
@@ -142,7 +124,12 @@ ul li a:hover {
   margin-bottom: 2rem;
 }
 
-
+.action__btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
 
 .action__btns button {
   font-size: 1rem;
@@ -150,33 +137,25 @@ ul li a:hover {
   letter-spacing: 2px;
   padding: 1rem 2rem;
   outline: none;
-  border: 2px solid var(--primary-color);
+  border: 2px solid goldenrod;
+  color: goldenrod;
+  background-color: transparent;
   border-radius: 10px;
   transition: 0.3s;
   cursor: pointer;
 }
 
-.hire__me {
-  background-color: rgb(128, 128, 128);
-  color: #ffffff;
-}
-
-.hire__me:hover {
-  background-color: var(--primary-color-dark);
-}
-
-.portfolio {
-  color: var(--primary-color);
-}
-
-.portfolio:hover {
-  background-color: var(--primary-color-dark);
-  color: #ffffff;
+.action__btns button:hover {
+  background-color: grey;
+  color: goldenrod;
+  border-color: grey;
 }
 
 .image {
-  display: grid;
-  place-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 }
 
 .image img {
